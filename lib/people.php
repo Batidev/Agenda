@@ -15,7 +15,7 @@ class People extends MaINObjectBDD {
         $bdd = BDD::getConnexion();
         $where = '';
         $clauses = [];
-        foreach ($filters => $filter) {
+        foreach ($filters as $filter) {
             $clauses[] = $filters.'='.$bdd->quote($filter) ;
         }
         if (!empty($clauses)) {
@@ -33,8 +33,8 @@ class People extends MaINObjectBDD {
         $bdd = BDD::getConnexion();
         $where = '';
         $clauses = [];
-        foreach ($filters as $k => $filter) {
-            $clauses[] = $k.'='.$bdd->quote($filter) ;
+        foreach ($filters as  $filter) {
+            $clauses[] = $filters.'='.$bdd->quote($filter) ;
         }
         if (!empty($clauses)) {
             $where = ' WHERE '.implode(' AND ', $clauses);

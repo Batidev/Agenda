@@ -18,7 +18,7 @@ class Agenda extends MaINObjectBDD {
         $bdd = BDD::getConnexion();
         $where = '';
         $clauses = [];
-        foreach ($filters => $filter) {
+        foreach ($filters as $filter) {
             $clauses[] = $filters.'='.$bdd->quote($filter) ;
         }
         if (!empty($clauses)) {
@@ -36,7 +36,7 @@ class Agenda extends MaINObjectBDD {
         $bdd = BDD::getConnexion();
         $where = '';
         $clauses = [];
-        foreach ($filters => $filter) {
+        foreach ($filters as $filter) {
             $clauses[] = $filters.'='.$bdd->quote($filter) ;
         }
         if (!empty($clauses)) {

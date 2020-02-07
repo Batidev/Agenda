@@ -120,7 +120,7 @@ class MainObjectBDD {
         $bdd = BDD::getConnexion();
         $where = '';
         $clauses = [];
-        foreach ($filters => $filter) {
+        foreach ($filters as $filter) {
             $clauses[] = $filters.'='.$bdd->quote($filter) ;
         }
         if (!empty($clauses)) {

@@ -15,13 +15,13 @@ class Events extends MaINObjectBDD {
 
     public function findAllByDate($filters=[]){
         $bdd = BDD::getConnexion() ;
-        $res = $bdd->query($query) ;
+        $res = $bdd->query($bdd) ;
         return $res->fetchAll(PDO::FETCH_CLASS, 'Agenda');
     }
 
     public function getAllPeople($filters=[]){
         $bdd = BDD::getConnexion() ;
-        $res = $bdd->query($query) ;
+        $res = $bdd->query($bdd) ;
         return $res->fetchAll(PDO::FETCH_CLASS, 'People');
     }
 }
